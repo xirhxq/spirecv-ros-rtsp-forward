@@ -41,18 +41,16 @@ include_directories(
   ${SV_INCLUDE_DIRS}
 )
 
+FILE(GLOB SRCS samples/*.cpp)
+foreach (src ${SRCS})
+    message(${src})
+    message("-------------------")
+    get_filename_component(name ${src} NAME_WE)
 
-add_executable(web_cam
-  samples/web_cam.cpp
-)
-target_link_libraries(web_cam ${catkin_LIBRARIES} ${SV_LIBRARIES})
+    add_executable(${name} ${src})
 
-add_executable(rtsp2topic
-  samples/rtsp2topic.cpp
-)
-target_link_libraries(rtsp2topic ${catkin_LIBRARIES} ${SV_LIBRARIES})
+    target_link_libraries(${name}
+        ${catkin_LIBRARIES} ${SV_LIBRARIES}
+    )
 
-add_executable(rtsp_forward
-  samples/rtsp_forward.cpp
-)
-target_link_libraries(rtsp_forward ${catkin_LIBRARIES} ${SV_LIBRARIES})
+endforeach()
