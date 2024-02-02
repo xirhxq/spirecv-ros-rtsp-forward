@@ -63,12 +63,12 @@ void usvStateCallback(const std_msgs::String::ConstPtr &msg) {
 }
 
 void tuav6StateCallback(const std_msgs::String::ConstPtr &msg) {
-    if (msg->data == "COMM_TEST" || msg->data == "READY" || msg->data == "SELF_CHECK" ) return;
+    if (msg->data == "COMM_TEST" || msg->data == "READY" || msg->data == "SELF_CHECK" || msg->data == "VOLOST") return;
     tuav6State = msg->data;
 }
 
 void tuav8StateCallback(const std_msgs::String::ConstPtr &msg) {
-    if (msg->data == "COMM_TEST" || msg->data == "READY" || msg->data == "SELF_CHECK" ) return;
+    if (msg->data == "COMM_TEST" || msg->data == "READY" || msg->data == "SELF_CHECK" || msg->data == "VOLOST" ) return;
     tuav8State = msg->data;
 }
 
