@@ -168,6 +168,7 @@ int main(int argc, char *argv[]) {
             state = newState;
             changeTo(state);
         } 
+		cout << "NOBACKUP" << std::endl;
         cout << "suav: " << suavState << std::endl; 
         cout << "usv: " << usvState << std::endl; 
         cout << "tuav2: " << tuav2State << std::endl; 

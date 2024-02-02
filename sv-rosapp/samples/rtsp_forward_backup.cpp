@@ -141,6 +141,9 @@ int main(int argc, char *argv[]) {
         if ((suavState == "COUNTDOWN" || suavState == "READY" || suavState == "COMM_TEST")) {
             newState = "";
         }
+		else if (suavState == "PREPARE" || suavState == "SEARCH") {
+			newState = "";
+		}
         else if (!close_report && suavState == "REPORT") {
             newState = "suav";
         }
@@ -181,6 +184,7 @@ int main(int argc, char *argv[]) {
             state = newState;
             changeTo(state);
         } 
+		cout << "------BACKUP------" << std::endl;
         cout << "suav: " << suavState << std::endl; 
         cout << "usv: " << usvState << std::endl; 
         cout << "tuav2: " << tuav2State << std::endl; 
