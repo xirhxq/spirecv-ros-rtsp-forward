@@ -1,0 +1,10 @@
+urls:
+  arm: "rtsp://192.168.147.168/live/live"
+  suav: "rtsp://192.168.147.21:8554/live"
+  usv: "rtsp://192.168.147.216:8554/live"
+  tuav6: "rtsp://192.168.147.61:8554/live"
+  tuav8: "rtsp://192.168.147.81:8554/live"
+  tuav2: "rtsp://192.168.147.42:8554/live"
+  tuav3: "rtsp://192.168.147.43:8554/live"
+
+defaultPicture: "FlyEagle.png"
